@@ -1,0 +1,20 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "debian/stretch64"
+  config.ssh.insert_key = false
+
+  ENV['LC_ALL']="en_US.UTF-8"
+
+  config.vm.provider "virtualbox" do |v|
+    v.name = "mbda_fintech"
+  end
+
+  config.vm.provision "file", source: "../.tmux.conf", destination: ".tmux.conf"
+  config.vm.provision "file", source: "../python/requirements.txt", destination: "requirements.txt"
+  config.vm.provision "shell", path: "provision.sh"
+
+  # Provision machine, then vagrant reload enabling this line
+  # config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
+end

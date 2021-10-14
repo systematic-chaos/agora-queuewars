@@ -1,0 +1,4 @@
+gnatsd-*
+.vagrant/
+infra/package.box
+build/
