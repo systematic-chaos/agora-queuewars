@@ -1,5 +1,4 @@
 OWNER = 'four'   # one, two, three, four, five, six
-#BASE_URL = "http://queuewars.luisbelloch.es"
 BASE_URL = "http://localhost:9000"
 
 BASE_PORT = 9092
