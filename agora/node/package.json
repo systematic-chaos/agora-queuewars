@@ -1,0 +1,15 @@
+{
+  "name": "agora",
+  "version": "1.0.0",
+  "description": "NATS training repository",
+  "repository": "http://gitlab.com/luisbelloch/agora",
+  "author": "Luis Belloch <luisbelloch@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.3.3",
+    "nats": "^1.3.0"
+  },
+  "engines": {
+    "node": ">=8.11"
+  }
+}
